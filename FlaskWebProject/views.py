@@ -66,7 +66,7 @@ def post(id):
             form=form
         )
     if form.validate_on_submit():
-        if form.image_path.data:
+        if request.files.__len__() > 0:
             post.save_changes(form, request.files['image_path'], current_user.id)
         else:
             post.save_changes(form, None, current_user.id)
