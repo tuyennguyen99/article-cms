@@ -11,7 +11,10 @@
 |Availability| High availability   | High availability        |Azure users can control the availability of VMs with availability zones. But this application doesn't really need this benefit. The availability of the VM and app services has been guaranteed by Microsoft.    |
 |Workflow    | CI/CD with source control (Github, Azure Repository, Bitbucket, Local git repository). Manual deployment (FTP)  | CI/CD with source control (Azure repository). Manual deployment        | Based on document from Microsoft, both App service and VM can support CI/CD. https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/articles/cicd-for-azure-vms   |
 
-
+### Choose the appropriate solution
+ - The app service will be the best choice for Project 1 (Article CMS)
 ### Assess app changes that would change your decision.
 
-*Detail how the app and any other needs would have to change for you to change your decision in the last section.* 
+ - We may change to use VM if we have to customize the hardware or OS setting or we need to install some specific application.
+ - The application's requirement is to handle a large number of processes.
+ - The owner has a plan for the system to accommodate a large number of users that exceeds the capabilities of the app service.
